@@ -1,0 +1,27 @@
+{
+  "admin": {
+    "name": "admin",
+    "permissions": [
+      "*"
+    ],
+    "members": [
+      "spaggettioh"
+    ]
+  },
+  "global": {
+    "name": "global",
+    "permissions": [
+      "help",
+      "commands",
+      "thirdperson",
+      "create",
+      "thirdperson",
+      "allowallportals",
+      "shake",
+      "restart",
+      "fizzle",
+      "resize_portals"
+    ],
+    "members": []
+  }
+}

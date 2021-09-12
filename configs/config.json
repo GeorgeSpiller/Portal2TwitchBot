@@ -1,0 +1,39 @@
+{
+  "nick": "portal2chatbot",
+  "oauth": "oauth:mmls4twd82qdbshid9qcsfmjxw3hsf",
+  "client_id": "u9czyhnowxs2g3vkjudyh6ggzcdcvb",
+  "prefix": "!",
+  "default_balance": 200,
+  "loyalty_interval": 60,
+  "loyalty_amount": 2,
+  "owner": "spaggettioh",
+  "channels": [
+    "spaggettioh"
+  ],
+  "mods_folder": "mods",
+  "commands_folder": "commands",
+  "command_server_enabled": true,
+  "command_server_port": 1337,
+  "command_server_host": "0.0.0.0",
+  "command_server_password": "",
+  "disable_whispers": true,
+  "use_command_whitelist": true,
+  "send_message_on_command_whitelist_deny": true,
+  "send_message_on_disabled_command_use": true,
+  "command_whitelist": [
+    "help",
+    "commands",
+    "findperm",
+    "addperm",
+    "addgroup",
+    "addmember",
+    "create",
+    "thirdperson",
+    "allowallportals",
+    "shake",
+    "explode",
+    "fizzle",
+    "resize_portals"
+  ],
+  "enable_cooldown_bypass_permissions": true
+}
