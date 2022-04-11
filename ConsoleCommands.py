@@ -106,6 +106,31 @@ def cmd_exec_withParam(txn, command, commandDict, customParameters, reset=False)
     cmd_run_with_sleep(txn, cmd_exec_string)
 
 
+def cmd_exec_multiple(txn, command, commandDict, numberOfExecutions , reset=False):
+    """Format all commands that run multiple times"""
+
+    attr = commandDict[command]
+    try:
+        execNum = int(numberOfExecutions)
+        # sanity check customParameters, format: [x, arg1, arg2, ..., argx]
+        if not reset:
+            if (execNum not in range(10)):
+                e_print("cmd_exec_multiple - numberOfExecutions",
+                        f"Requires 1 args, args: {numberOfExecutions}\n\t {bcolors.OKCYAN}Format: [x, arg1]{bcolors.ENDC}")
+            else:
+                cmd_exec_string = command
+        else:
+            cmd_exec_string = attr['default_reset']
+        # run command string
+        for _ in range(execNum):
+            print(execNum)
+            # cmd_run_with_sleep(txn, cmd_exec_string)
+
+    except ValueError:
+        cmd_exec_string = attr['default_reset']
+        cmd_run_with_sleep(txn, cmd_exec_string)
+
+
 def setup():
     """Return the TellNet obj from TelnetSetup, and return the command dictionary"""
 

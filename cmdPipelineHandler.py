@@ -90,7 +90,7 @@ class command:
             ConsoleCommands.cmd_exec_toggle(self.txn, self.name, self.dict, reset=self.reset)
         elif self.parameters == None or (len(self.parameters) == 0):
             ConsoleCommands.cmd_exec_singleUse(self.txn, self.name, self.dict, reset=self.reset)
-        else:
+        else: # TODO: if command allows for custom parameters, cmd_exec_withParam, else if its a multi command, cmd_exec_multiple
             ConsoleCommands.cmd_exec_withParam(self.txn, self.name, self.dict, self.parameters, reset=self.reset)
 
 
